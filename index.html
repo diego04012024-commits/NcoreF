@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NcoreF: tienda online de tecnología, hogar, mascotas, aire libre y deportes.">
+  <title>NcoreF — Todo en tu core</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Ncore<span>F</span></a>
+
+        <div class="d-flex align-items-center gap-2 order-lg-last">
+          <a href="carrito.html" class="cart-link" aria-label="Ver carrito">
+            <i class="bi bi-bag-fill"></i> <span class="badge rounded-pill" id="cart-count">0</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav me-auto ms-lg-3">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="catalogo.html" id="menuCatalogo" role="button" data-bs-toggle="dropdown" aria-expanded="false">Catálogo</a>
+              <ul class="dropdown-menu" aria-labelledby="menuCatalogo">
+            <li><a class="dropdown-item" href="catalogo.html"><i class="bi bi-grid me-2"></i>Ver todo</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="catalogo.html?cat=tecnologia"><span class="punto c-tecnologia"></span>Tecnología</a></li>
+            <li><a class="dropdown-item" href="catalogo.html?cat=hogar"><span class="punto c-hogar"></span>Hogar</a></li>
+            <li><a class="dropdown-item" href="catalogo.html?cat=mascotas"><span class="punto c-mascotas"></span>Mascotas</a></li>
+            <li><a class="dropdown-item" href="catalogo.html?cat=aire-libre"><span class="punto c-aire-libre"></span>Aire Libre</a></li>
+            <li><a class="dropdown-item" href="catalogo.html?cat=deportes"><span class="punto c-deportes"></span>Deportes</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+          <form class="buscador my-2 my-lg-0" action="catalogo.html" role="search">
+            <i class="bi bi-search"></i>
+            <input class="form-control form-control-sm" type="search" name="q" placeholder="Buscar productos" aria-label="Buscar productos">
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Portada: carrusel de Bootstrap -->
+    <section class="portada">
+      <div id="carruselPortada" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+        <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carruselPortada" data-bs-slide-to="0" class="active" aria-label="Diapositiva 1"></button>
+        <button type="button" data-bs-target="#carruselPortada" data-bs-slide-to="1" class="" aria-label="Diapositiva 2"></button>
+        <button type="button" data-bs-target="#carruselPortada" data-bs-slide-to="2" class="" aria-label="Diapositiva 3"></button>
+        </div>
+        <div class="carousel-inner">
+      <div class="carousel-item active" style="--fondo:#0d1321">
+        <div class="container slide-cont">
+          <div class="row align-items-center gy-4 gx-lg-5 w-100">
+            <div class="col-lg-6">
+              <p class="nota-mano mb-2">tienda hecha en Lima</p>
+              <h1 class="titular mb-3">Lo que buscas, <span class="subrayado">en un solo carrito</span></h1>
+              <p class="lead mb-4">Elegimos 36 productos de tecnología, hogar, mascotas, aire libre y deportes. Entra, compara y arma tu pedido sin vueltas.</p>
+              <a href="catalogo.html" class="btn btn-amber me-2 mb-2">Ver el catálogo</a>
+              <a href="nosotros.html" class="btn btn-outline-light mb-2">Conocer NcoreF</a>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block">
+              <div class="foto-pegada"><img src="img/productos/audifonos-skullcandy.jpg" alt="Audífonos Skullcandy inalámbricos"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" style="--fondo:#34170d">
+        <div class="container slide-cont">
+          <div class="row align-items-center gy-4 gx-lg-5 w-100">
+            <div class="col-lg-6">
+              <p class="nota-mano mb-2">se viene el fin de semana</p>
+              <h2 class="titular mb-3">Carpa, parrilla y <span class="subrayado">a disfrutar</span></h2>
+              <p class="lead mb-4">Carpas y parrilla portátil para la playa, el camping o una reunión en el patio.</p>
+              <a href="catalogo.html?cat=aire-libre" class="btn btn-amber me-2 mb-2">Ver Aire Libre</a>
+              <a href="catalogo.html?cat=hogar" class="btn btn-outline-light mb-2">Mirar Hogar</a>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block">
+              <div class="foto-pegada"><img src="img/productos/carpa-popup.jpg" alt="Carpa pop-up automática"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" style="--fondo:#3a1226">
+        <div class="container slide-cont">
+          <div class="row align-items-center gy-4 gx-lg-5 w-100">
+            <div class="col-lg-6">
+              <p class="nota-mano mb-2">para moverte</p>
+              <h2 class="titular mb-3">Equipo para <span class="subrayado">entrenar en casa</span></h2>
+              <p class="lead mb-4">Pesas, mancuernas, step, mat de yoga y más para armar tu rutina.</p>
+              <a href="catalogo.html?cat=deportes" class="btn btn-amber me-2 mb-2">Ver Deportes</a>
+              <a href="catalogo.html?cat=mascotas" class="btn btn-outline-light mb-2">Ver Mascotas</a>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block">
+              <div class="foto-pegada"><img src="img/categorias/deportes.jpg" alt="Pesa rusa de goma"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carruselPortada" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Anterior</span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carruselPortada" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Siguiente</span></button>
+      </div>
+    </section>
+
+    <!-- Categorías -->
+    <section class="container seccion" id="categorias">
+      <p class="nota-mano mb-1">para empezar por algún lado</p>
+      <h2 class="titulo-seccion mb-4">Cinco categorías, un solo carrito</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-5 g-3">
+        <div class="col">
+          <a class="cat-card c-tecnologia" href="catalogo.html?cat=tecnologia">
+            <img src="img/categorias/tecnologia.jpg" alt="Tecnología" loading="lazy">
+            <div class="cuerpo">
+              <span class="chip">Tecnología</span>
+              <h3>Tecnología</h3>
+              <p>Audio, relojes y accesorios para tu día a día.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a class="cat-card c-hogar" href="catalogo.html?cat=hogar">
+            <img src="img/categorias/hogar.jpg" alt="Hogar" loading="lazy">
+            <div class="cuerpo">
+              <span class="chip">Hogar</span>
+              <h3>Hogar</h3>
+              <p>Para organizar, refrescar y darle vida a tus espacios.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a class="cat-card c-mascotas" href="catalogo.html?cat=mascotas">
+            <img src="img/categorias/mascotas.jpg" alt="Mascotas" loading="lazy">
+            <div class="cuerpo">
+              <span class="chip">Mascotas</span>
+              <h3>Mascotas</h3>
+              <p>Accesorios y cuidado para tu compañero.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a class="cat-card c-aire-libre" href="catalogo.html?cat=aire-libre">
+            <img src="img/categorias/aire-libre.jpg" alt="Aire Libre" loading="lazy">
+            <div class="cuerpo">
+              <span class="chip">Aire Libre</span>
+              <h3>Aire Libre</h3>
+              <p>Carpas y parrilla para camping, playa o reuniones.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a class="cat-card c-deportes" href="catalogo.html?cat=deportes">
+            <img src="img/categorias/deportes.jpg" alt="Deportes" loading="lazy">
+            <div class="cuerpo">
+              <span class="chip">Deportes</span>
+              <h3>Deportes</h3>
+              <p>Pesas, mat de yoga y accesorios para entrenar.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Destacados (los dibuja JavaScript desde productos.js) -->
+    <section class="container pb-5" id="destacados">
+      <div class="d-flex justify-content-between align-items-end flex-wrap gap-2 mb-4">
+        <div><p class="nota-mano mb-1">lo que más miran</p><h2 class="titulo-seccion mb-0">Para empezar a mirar</h2></div>
+        <a href="catalogo.html" class="fw-semibold text-decoration-none">Ver todo el catálogo →</a>
+      </div>
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3" id="destacados-grid">
+        <!-- Aquí se insertan las tarjetas con JavaScript -->
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container py-5">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <p class="navbar-brand mb-2">Ncore<span>F</span></p>
+          <p class="text-secondary mb-3">Todo en tu core. Una tienda online hecha en Lima, con cinco categorías y un carrito que no se olvida de lo que agregaste.</p>
+          <div class="redes">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h2 class="pie-titulo">Tienda</h2>
+          <a href="catalogo.html">Catálogo</a>
+          <a href="carrito.html">Carrito</a>
+          <a href="nosotros.html">Nosotros</a>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h2 class="pie-titulo">Ayuda</h2>
+          <a href="contacto.html">Escríbenos</a>
+          <a class="btn-reclamos" href="reclamaciones.html"><i class="bi bi-journal-text"></i> Libro de Reclamaciones</a>
+        </div>
+        <div class="col-lg-3">
+          <h2 class="pie-titulo">Ubícanos</h2>
+          <p class="mb-1"><i class="bi bi-geo-alt me-2"></i>Av. Ejemplo 123, Lima</p>
+          <p class="mb-1"><i class="bi bi-telephone me-2"></i>+51 999999999</p>
+          <p class="mb-1"><i class="bi bi-envelope me-2"></i>hola@ncoref.pe</p>
+          <p class="mb-0"><i class="bi bi-clock me-2"></i>Lun. a Sáb. de 9:00 a 20:00</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <div class="container">© 2026 NcoreF. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Libro de Reclamaciones virtual de NcoreF.">
+  <title>Libro de Reclamaciones — NcoreF</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Ncore<span>F</span></a>
+
+        <div class="d-flex align-items-center gap-2 order-lg-last">
+          <a href="carrito.html" class="cart-link" aria-label="Ver carrito">
+            <i class="bi bi-bag-fill"></i> <span class="badge rounded-pill" id="cart-count">0</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav me-auto ms-lg-3">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="catalogo.html" id="menuCatalogo" role="button" data-bs-toggle="dropdown" aria-expanded="false">Catálogo</a>
+              <ul class="dropdown-menu" aria-labelledby="menuCatalogo">
+            <li><a class="dropdown-item" href="catalogo.html"><i class="bi bi-grid me-2"></i>Ver todo</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="catalogo.html?cat=tecnologia"><span class="punto c-tecnologia"></span>Tecnología</a></li>
+            <li><a class="dropdown-item" href="catalogo.html?cat=hogar"><span class="punto c-hogar"></span>Hogar</a></li>
+            <li><a class="dropdown-item" href="catalogo.html?cat=mascotas"><span class="punto c-mascotas"></span>Mascotas</a></li>
+            <li><a class="dropdown-item" href="catalogo.html?cat=aire-libre"><span class="punto c-aire-libre"></span>Aire Libre</a></li>
+            <li><a class="dropdown-item" href="catalogo.html?cat=deportes"><span class="punto c-deportes"></span>Deportes</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+          <form class="buscador my-2 my-lg-0" action="catalogo.html" role="search">
+            <i class="bi bi-search"></i>
+            <input class="form-control form-control-sm" type="search" name="q" placeholder="Buscar productos" aria-label="Buscar productos">
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-head" aria-label="Encabezado de página">
+    <div class="container">
+      <nav aria-label="breadcrumb"><ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Libro de Reclamaciones</li>
+      </ol></nav>
+      <h1>Libro de Reclamaciones</h1>
+      <p>Cuéntanos qué pasó con tu compra o con nuestra atención. Esta hoja queda registrada con un número.</p>
+    </div>
+  </section>
+
+  <main class="container seccion">
+    <form class="needs-validation" id="form-reclamo" novalidate>
+      <div class="row g-4">
+        <div class="col-lg-8">
+
+          <div class="form-card mb-4">
+            <h2>1. Tus datos</h2>
+            <div class="row g-3">
+              <div class="col-md-8">
+                <label for="r-nombre" class="form-label">Nombre completo</label>
+                <input type="text" class="form-control" id="r-nombre" required minlength="5">
+                <div class="invalid-feedback">Escribe tu nombre completo.</div>
+              </div>
+              <div class="col-md-4">
+                <label for="r-tipodoc" class="form-label">Documento</label>
+                <select class="form-select" id="r-tipodoc" required>
+                  <option value="dni" selected>DNI</option>
+                  <option value="ce">Carné de extranjería</option>
+                  <option value="pas">Pasaporte</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label for="r-numdoc" class="form-label">Número de documento</label>
+                <input type="text" class="form-control" id="r-numdoc" required pattern="[0-9]{8}" maxlength="12">
+                <div class="invalid-feedback" id="r-numdoc-error">El DNI tiene 8 números.</div>
+              </div>
+              <div class="col-md-8">
+                <label for="r-domicilio" class="form-label">Domicilio</label>
+                <input type="text" class="form-control" id="r-domicilio" required minlength="6">
+                <div class="invalid-feedback">Escribe tu domicilio.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="r-correo" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="r-correo" required>
+                <div class="invalid-feedback">Escribe un correo válido.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="r-celular" class="form-label">Celular</label>
+                <input type="tel" class="form-control" id="r-celular" required pattern="9[0-9]{8}" placeholder="999999999">
+                <div class="invalid-feedback">Son 9 dígitos y empieza con 9.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-card mb-4">
+            <h2>2. Qué compraste</h2>
+            <div class="row g-3">
+              <div class="col-12">
+                <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="bien" id="bien-producto" value="producto" checked><label class="form-check-label" for="bien-producto">Producto</label></div>
+                <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="bien" id="bien-servicio" value="servicio"><label class="form-check-label" for="bien-servicio">Servicio (envío, atención)</label></div>
+              </div>
+              <div class="col-md-8">
+                <label for="r-descripcion" class="form-label">Producto o servicio</label>
+                <input type="text" class="form-control" id="r-descripcion" required placeholder="Ej. Ventilador de Torre Movisun">
+                <div class="invalid-feedback">Cuéntanos de qué producto o servicio se trata.</div>
+              </div>
+              <div class="col-md-4">
+                <label for="r-monto" class="form-label">Monto pagado (S/)</label>
+                <input type="number" class="form-control" id="r-monto" min="0" step="0.01" required>
+                <div class="invalid-feedback">Escribe el monto, aunque sea aproximado.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-card mb-4">
+            <h2>3. Qué pasó</h2>
+            <div class="row g-3">
+              <div class="col-12">
+                <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="tipo" id="tipo-reclamo" value="reclamo" checked><label class="form-check-label" for="tipo-reclamo"><strong>Reclamo</strong>: no estoy conforme con el producto o servicio</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="tipo" id="tipo-queja" value="queja"><label class="form-check-label" for="tipo-queja"><strong>Queja</strong>: me molestó la atención, aunque el producto esté bien</label></div>
+              </div>
+              <div class="col-12">
+                <label for="r-detalle" class="form-label">Detalle</label>
+                <textarea class="form-control" id="r-detalle" rows="4" required minlength="15" placeholder="Cuéntanos qué ocurrió, con fechas si las recuerdas"></textarea>
+                <div class="invalid-feedback">Cuéntanos qué pasó (mínimo 15 caracteres).</div>
+              </div>
+              <div class="col-12">
+                <label for="r-pedido" class="form-label">¿Qué solución esperas?</label>
+                <textarea class="form-control" id="r-pedido" rows="2" required minlength="5"></textarea>
+                <div class="invalid-feedback">Dinos qué solución esperas.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="r-acepto" required>
+            <label class="form-check-label" for="r-acepto">Confirmo que los datos son ciertos.</label>
+            <div class="invalid-feedback">Marca esta casilla para enviar la hoja.</div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">Enviar hoja de reclamación</button>
+        </div>
+
+        <aside class="col-lg-4">
+          <div class="form-card">
+            <h2 class="h5">Antes de enviar</h2>
+            <p class="small">Al enviar tu reclamo recibirás un número de hoja. Guárdalo para hacer seguimiento.</p>
+            
+          </div>
+        </aside>
+      </div>
+    </form>
+
+    <div class="modal fade" id="modalReclamo" tabindex="-1" aria-labelledby="modalReclamoTitulo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"><div class="modal-content" style="border-radius:var(--forma)">
+        <div class="modal-body text-center p-4">
+          <i class="bi bi-journal-check fs-1" style="color:var(--nc-blue)"></i>
+          <h2 class="h4 mt-2" id="modalReclamoTitulo">Hoja registrada</h2>
+          <p class="mb-1">Número de hoja: <strong id="numero-reclamo"></strong></p>
+          <p class="text-secondary small">Guarda este número para hacer seguimiento.</p>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
+        </div>
+      </div></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container py-5">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <p class="navbar-brand mb-2">Ncore<span>F</span></p>
+          <p class="text-secondary mb-3">Todo en tu core. Una tienda online hecha en Lima, con cinco categorías y un carrito que no se olvida de lo que agregaste.</p>
+          <div class="redes">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h2 class="pie-titulo">Tienda</h2>
+          <a href="catalogo.html">Catálogo</a>
+          <a href="carrito.html">Carrito</a>
+          <a href="nosotros.html">Nosotros</a>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h2 class="pie-titulo">Ayuda</h2>
+          <a href="contacto.html">Escríbenos</a>
+          <a class="btn-reclamos" href="reclamaciones.html"><i class="bi bi-journal-text"></i> Libro de Reclamaciones</a>
+        </div>
+        <div class="col-lg-3">
+          <h2 class="pie-titulo">Ubícanos</h2>
+          <p class="mb-1"><i class="bi bi-geo-alt me-2"></i>Av. Ejemplo 123, Lima</p>
+          <p class="mb-1"><i class="bi bi-telephone me-2"></i>+51 999999999</p>
+          <p class="mb-1"><i class="bi bi-envelope me-2"></i>hola@ncoref.pe</p>
+          <p class="mb-0"><i class="bi bi-clock me-2"></i>Lun. a Sáb. de 9:00 a 20:00</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <div class="container">© 2026 NcoreF. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/formularios.js"></script>
+</body>
+</html>

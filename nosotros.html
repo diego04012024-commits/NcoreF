@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Quiénes hicimos NcoreF y cómo lo armamos.">
+  <title>Nosotros — NcoreF</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Ncore<span>F</span></a>
+
+        <div class="d-flex align-items-center gap-2 order-lg-last">
+          <a href="carrito.html" class="cart-link" aria-label="Ver carrito">
+            <i class="bi bi-bag-fill"></i> <span class="badge rounded-pill" id="cart-count">0</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav me-auto ms-lg-3">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="catalogo.html" id="menuCatalogo" role="button" data-bs-toggle="dropdown" aria-expanded="false">Catálogo</a>
+              <ul class="dropdown-menu" aria-labelledby="menuCatalogo">
+            <li><a class="dropdown-item" href="catalogo.html"><i class="bi bi-grid me-2"></i>Ver todo</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="catalogo.html?cat=tecnologia"><span class="punto c-tecnologia"></span>Tecnología</a></li>
+            <li><a class="dropdown-item" href="catalogo.html?cat=hogar"><span class="punto c-hogar"></span>Hogar</a></li>
+            <li><a class="dropdown-item" href="catalogo.html?cat=mascotas"><span class="punto c-mascotas"></span>Mascotas</a></li>
+            <li><a class="dropdown-item" href="catalogo.html?cat=aire-libre"><span class="punto c-aire-libre"></span>Aire Libre</a></li>
+            <li><a class="dropdown-item" href="catalogo.html?cat=deportes"><span class="punto c-deportes"></span>Deportes</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+          <form class="buscador my-2 my-lg-0" action="catalogo.html" role="search">
+            <i class="bi bi-search"></i>
+            <input class="form-control form-control-sm" type="search" name="q" placeholder="Buscar productos" aria-label="Buscar productos">
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-head" aria-label="Encabezado de página">
+    <div class="container">
+      <nav aria-label="breadcrumb"><ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Nosotros</li>
+      </ol></nav>
+      <h1>Nosotros</h1>
+      <p>Quiénes somos y cómo armamos la tienda.</p>
+    </div>
+  </section>
+
+  <main class="container seccion">
+    <div class="row gy-5 gx-lg-5">
+      <div class="col-lg-8">
+        <p class="nota-mano mb-1">la historia corta</p>
+        <h2 class="titulo-seccion mb-3">Qué es NcoreF</h2>
+        <p>NcoreF es una tienda online con productos de tecnología, hogar, mascotas, aire libre y deportes. La armamos de principio a fin: desde el mapa del sitio y los wireframes hasta el carrito y el pedido.</p>
+        <p>El nombre juega con <em>core</em>, el núcleo: la idea de tener en un solo lugar lo que necesitas para la casa, tu mascota, el trabajo o el fin de semana.</p>
+      </div>
+    </div>
+
+    <section class="mt-5">
+      <h2 class="h4 mb-3">El equipo</h2>
+      <!-- Cambien "Integrante 1, 2, 3 y 4" por los nombres reales del grupo -->
+      <div class="row g-3">
+        <div class="col-6 col-lg-3"><div class="integrante c-tecnologia"><div class="avatar">1</div><h3 class="h6 mb-1">Integrante 1</h3><p class="mb-0 small text-secondary"><strong>Estructura</strong><br>HTML y Bootstrap</p></div></div>
+        <div class="col-6 col-lg-3"><div class="integrante c-hogar"><div class="avatar">2</div><h3 class="h6 mb-1">Integrante 2</h3><p class="mb-0 small text-secondary"><strong>Diseño</strong><br>CSS y menú</p></div></div>
+        <div class="col-6 col-lg-3"><div class="integrante c-mascotas"><div class="avatar">3</div><h3 class="h6 mb-1">Integrante 3</h3><p class="mb-0 small text-secondary"><strong>Datos</strong><br>productos.js y carrito</p></div></div>
+        <div class="col-6 col-lg-3"><div class="integrante c-deportes"><div class="avatar">4</div><h3 class="h6 mb-1">Integrante 4</h3><p class="mb-0 small text-secondary"><strong>Interacción</strong><br>JavaScript y formularios</p></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container py-5">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <p class="navbar-brand mb-2">Ncore<span>F</span></p>
+          <p class="text-secondary mb-3">Todo en tu core. Una tienda online hecha en Lima, con cinco categorías y un carrito que no se olvida de lo que agregaste.</p>
+          <div class="redes">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h2 class="pie-titulo">Tienda</h2>
+          <a href="catalogo.html">Catálogo</a>
+          <a href="carrito.html">Carrito</a>
+          <a href="nosotros.html">Nosotros</a>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h2 class="pie-titulo">Ayuda</h2>
+          <a href="contacto.html">Escríbenos</a>
+          <a class="btn-reclamos" href="reclamaciones.html"><i class="bi bi-journal-text"></i> Libro de Reclamaciones</a>
+        </div>
+        <div class="col-lg-3">
+          <h2 class="pie-titulo">Ubícanos</h2>
+          <p class="mb-1"><i class="bi bi-geo-alt me-2"></i>Av. Ejemplo 123, Lima</p>
+          <p class="mb-1"><i class="bi bi-telephone me-2"></i>+51 999999999</p>
+          <p class="mb-1"><i class="bi bi-envelope me-2"></i>hola@ncoref.pe</p>
+          <p class="mb-0"><i class="bi bi-clock me-2"></i>Lun. a Sáb. de 9:00 a 20:00</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <div class="container">© 2026 NcoreF. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
